@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+{% endblock %}
+{% block body %}
+  {% for genus in genuses %}
+      <tr><td><a href="{{ path('genus',{'name': genus.name})  }}">{{ genus.name}}</a></td>
+          <td>{{ genus.name }} </td>
+          <td>{{ genus.email }}</td>
+          <td> {{ genus.number }}</td>
+
+          <td> {{ genus.update|date('y-m-d') }}</td>
+
+     </tr>
+      <br>
+      {% endfor %}
+{% endblock %}
